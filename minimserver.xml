@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container version="2">
   <Name>MinimServer 2</Name>
-  <Repository>minimworld/minimserver2</Repository>
+  <Repository>minimworld/minimserver</Repository>
   <Registry>https://hub.docker.com/r/minimworld/minimserver/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
