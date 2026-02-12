@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Name>MinimServer 2</Name>
+  <Repository>minimserver/minimserver2</Repository>
+  <Registry>https://hub.docker.com/r/minimserver/minimserver2/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forum.minimserver.com/</Support>
+  <Project>https://minimserver.com/</Project>
+  <Overview>
+    MinimServer 2 is a UPnP AV media server that makes your music collection available to UPnP AV devices on your network.
+    This container provides the latest version of MinimServer 2 with full support for modern audio formats and streaming capabilities.
+  </Overview>
+  <Category>MediaServer</Category>
+  <WebUI>http://[IP]:[PORT:9790]/</WebUI>
+  <TemplateURL>https://github.com/desrogers/docker-templates/raw/main/minimserver2.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/desrogers/docker-templates/main/icons/minimserver2.png</Icon>
+
+  <Config Name="Media Directory" Target="/music" Default="/mnt/user/music/" Mode="rw" Description="Directory containing your music files" Type="Path" Display="always" Required="true"/>
+  <Config Name="Configuration Directory" Target="/config" Default="/mnt/user/appdata/minimserver2/" Mode="rw" Description="Directory for MinimServer configuration files" Type="Path" Display="always" Required="true"/>
+
+  <Config Name="WebUI Port" Target="9790" Default="9790" Mode="tcp" Description="Port for MinimServer web interface" Type="Port" Display="always" Required="true"/>
+  <Config Name="UPnP Port" Target="1900" Default="1900" Mode="udp" Description="UPnP discovery port" Type="Port" Display="always" Required="true"/>
+  <Config Name="Streaming Port" Target="9791" Default="9791" Mode="tcp" Description="Port for audio streaming" Type="Port" Display="always" Required="true"/>
+
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID for file permissions" Type="Variable" Display="always" Required="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group ID for file permissions" Type="Variable" Display="always" Required="false"/>
+  <Config Name="TZ" Target="TZ" Default="America/Chicago" Mode="" Description="Timezone (e.g., America/New_York, Europe/London)" Type="Variable" Display="always" Required="false"/>
+
+  <Config Name="MINIMSERVER_OPTS" Target="MINIMSERVER_OPTS" Default="" Mode="" Description="Additional MinimServer options (optional)" Type="Variable" Display="advanced" Required="false"/>
+  <Config Name="JAVA_OPTS" Target="JAVA_OPTS" Default="-Xmx512m" Mode="" Description="Java runtime options" Type="Variable" Display="advanced" Required="false"/>
+
+  <Config Name="Extra Parameters" Target="" Default="" Mode="" Description="Additional docker run parameters (optional)" Type="Variable" Display="advanced" Required="false"/>
+</Container>
+
