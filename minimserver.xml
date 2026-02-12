@@ -13,8 +13,8 @@
   </Overview>
   <Category>MediaServer</Category>
   <WebUI>http://[IP]:[PORT:9790]/</WebUI>
-  <TemplateURL>https://github.com/desrogers/docker-templates/raw/main/minimserver2.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/desrogers/docker-templates/main/icons/minimserver2.png</Icon>
+  <TemplateURL>https://github.com/desrogers/docker-templates/raw/main/minimserver.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/desrogers/docker-templates/main/icons/minimserver.png</Icon>
 
   <Config Name="Media Directory" Target="/music" Default="/mnt/user/music/" Mode="rw" Description="Directory containing your music files" Type="Path" Display="always" Required="true"/>
   <Config Name="Configuration Directory" Target="/config" Default="/mnt/user/appdata/minimserver2/" Mode="rw" Description="Directory for MinimServer configuration files" Type="Path" Display="always" Required="true"/>
